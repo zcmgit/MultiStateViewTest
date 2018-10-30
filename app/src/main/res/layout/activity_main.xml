@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@android:color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="MultiStateView"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="20sp"/>
+
+    <com.example.view.MultiStateView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_animateViewChanges="true"
+        app:msv_emptyView="@layout/empty_view"
+        app:msv_errorView="@layout/err_view"
+        app:msv_loadingView="@layout/loading_view"
+        app:msv_viewState="content"
+        android:id="@+id/multistateview"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="content"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+    </com.example.view.MultiStateView>
+</LinearLayout>
